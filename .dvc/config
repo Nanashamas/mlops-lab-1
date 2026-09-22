@@ -1,4 +1,6 @@
 [core]
-    remote = origin
+    remote = local_remote
 ['remote "origin"']
     url = https://dagshub.com/noura.shamas.2003/mlops-lab-1.dvc
+['remote "local_remote"']
+    url = C:\Users\Noura\dvc_local_storage
