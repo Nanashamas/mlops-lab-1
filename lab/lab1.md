@@ -1,18 +1,15 @@
-Question 1: Observe the files created by uv init, what do you think they contain?
+Question 1 (uv init files): Already answered in your file (pyproject.toml, .python-version, etc.).
 
+Question 2 (Dependencies): Explains that pyproject.toml lists direct dependencies and constraints, while uv.lock records exact resolved versions and hashes for reproducibility.
 
+Question 3 (.dvc directory): Contains internal DVC configuration (config) and state cache directory pointers.
 
-pyproject.toml: The standard Python project metadata configuration file. It defines project dependencies, build systems, project name, version, and tool-specific settings.
+Question 4 (data.dvc): Contains the hash (md5) of the tracked folder, total size, and number of files.
 
+Question 5 (.gitignore after dvc add): DVC automatically appends /data to .gitignore so Git does not track large binary data files.
 
+Question 6 (Local vs Cloud Remote): Specify Option 1: Local storage directory at C:\Users\Noura\dvc_local_storage.
 
-.python-version: Specifies the exact Python version that uv will use for this environment.
+Question 7 (Why DVC instead of Git): Git is designed for text/source code and degrades severely when tracking large binary files; DVC stores pointers/hashes in Git while keeping heavy data outside the repository.
 
-
-
-hello.py (or main.py depending on the uv release template): A basic starter script to verify that uv run works.
-
-
-
-.gitignore: Initialized with standard Python ignores (like .venv, \_\_pycache\_\_).
-
+Question 8 (git/dvc checkout rollback): Checking out commit 19183b4 and running dvc checkout removed food11_processed and food11_processed_mini, leaving only food11_raw, demonstrating version control across datasets.
